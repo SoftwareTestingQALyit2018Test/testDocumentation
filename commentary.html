@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>commentary</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<link rel="stylesheet" href="prism.css">
+<script src="prism.js"></script>
+<style>body { padding: 20px } pre { padding: 0 }</style>
+<h1 id="commentary-on-example-1">Commentary on Example 1</h1>
+<h2 id="synopsis">Synopsis</h2>
+<p>The purpose of the example is to show the bare bones invocation of a JUnit test from the command line and then provide a detailed commentary on the elementary steps in the JUnit testing process.</p>
+<p>In this example we have a Java source file which contains a SUT, a system under test, and an accompanying JUnit 4 test.</p>
+<h2 id="the-system-under-test">The System Under Test</h2>
+<p>The first step is to create the SUT - in this simple example I will create and execute all commands from a bash shell:</p>
+<pre class="shell"><code>$ vim helloWorld.java
+...
+$</code></pre>
+<p>Where <code>vim</code> is a well known text-editor which is invoked with a single argument which the name of the Java source code.</p>
+<p><code>helloworld.java</code> is the SUT element in this testing example and is very simple in its behaviour:</p>
+<pre ><code class="language-java line-numbers"> 
+import java.io.*;
+
+public class helloWorld{
+
+    private String name;
+
+    public String sayHello(){
+        return("Hello");
+    }
+
+    public String sayGoodbye(){
+        return ("Goodbye");
+    }
+
+    public String sayName(String name){
+        this.name = name;
+        return name;
+    }
+}
+</code></pre>
+</body>
+</html>
