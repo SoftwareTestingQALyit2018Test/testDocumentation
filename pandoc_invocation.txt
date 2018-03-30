@@ -1,0 +1,4 @@
+From the commandline, to invoke pandoc and generate the documentation.
+
+$ pandoc --from markdown+smart+backtick_code_blocks+fenced_code_attributes --to html5 --no-highlight  --standalone -o commentary.html commentary.md 
+
